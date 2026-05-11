@@ -20,7 +20,7 @@
     }
 
     main {
-        width: min(100% - 2rem, 900px);
+        width: min(100% - 2rem, 1100px);
         margin: 3rem auto;
         padding: 2rem;
         background: #ffffff;
