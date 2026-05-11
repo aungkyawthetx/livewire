@@ -9,6 +9,10 @@
     @vite('resources/css/app.css')
 </head>
 <body>
+    <main>
+        <h2>Livewire Course</h2>
 
+        <livewire:book-list></livewire:book-list>
+    </main>
 </body>
 </html>
