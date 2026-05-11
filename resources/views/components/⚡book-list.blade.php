@@ -11,7 +11,15 @@ new class extends Component {
     {
         $this->books = Book::all();
     }
+
+    public function delete(Book $book)
+    {
+        $book->delete();
+        $this->books = Book::all();
+    }
 };
+
+
 ?>
 
 <div>
@@ -35,6 +43,12 @@ new class extends Component {
                         {{ $book->rating }}/10
                     </p>
                 </div>
+                <button
+                    wire:click="delete({{ $book->id }})"
+                    class="mt-5 rounded-md bg-red-50 px-3 py-2 text-sm font-semibold text-red-700 transition hover:bg-red-100 focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-offset-2 cursor-pointer"
+                >
+                    Delete
+                </button>
             </li>
         @endforeach
     </ul>
